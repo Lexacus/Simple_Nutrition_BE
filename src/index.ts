@@ -61,3 +61,5 @@ app.get("/reset", async (_, res: Response) => {
 app.listen(3002, "0.0.0.0", () => {
   console.log("App listening on port ", port);
 });
+
+export default app;
