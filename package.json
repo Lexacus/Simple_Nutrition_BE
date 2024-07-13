@@ -9,7 +9,7 @@
     "devnode": "npx ts-node src/index.ts",
     "build": "npx tsc",
     "start": "node dist/index.js",
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon api/index.ts"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",

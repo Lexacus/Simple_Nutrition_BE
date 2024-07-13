@@ -1,16 +1,15 @@
 {
   "version": 2,
-  "name": "templates",
   "builds": [
     {
-      "src": "dist/index.js",
+      "src": "./index.ts",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/dist/index.js"
+      "dest": "/"
     }
   ]
 }
