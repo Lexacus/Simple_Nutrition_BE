@@ -1,7 +1,7 @@
 import express, { json, Request, Response, urlencoded } from "express";
 import dotenv from "dotenv";
-import { connectToDatabase } from "../src/database/connection";
-import { FoodModel } from "../src/modules/foodModel";
+import { connectToDatabase } from "./database/connection";
+import { FoodModel } from "./modules/foodModel";
 import cors from "cors";
 
 dotenv.config();

@@ -8,6 +8,6 @@
     "outDir": "./dist",
     "forceConsistentCasingInFileNames": true // Disallow inconsistently-cased references to the same file    
   },
-  "include": ["src/**/*.ts", "api/index.ts"],               // Include all TypeScript files in the src directory
+  "include": ["src/**/*.ts", "src/index.ts"],               // Include all TypeScript files in the src directory
   "exclude": ["node_modules"]  
 }
