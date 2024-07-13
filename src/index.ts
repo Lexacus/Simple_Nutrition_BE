@@ -62,4 +62,4 @@ app.listen(3002, "0.0.0.0", () => {
   console.log("App listening on port ", port);
 });
 
-export default app;
+module.exports = app;
