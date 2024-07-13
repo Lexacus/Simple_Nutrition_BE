@@ -6,7 +6,7 @@ import cors from "cors";
 
 dotenv.config();
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3002;
 
 app.use(json());
 app.use(urlencoded({ extended: true }));
@@ -58,6 +58,6 @@ app.get("/reset", async (_, res: Response) => {
   return res.json({ reset: "reset" });
 });
 
-app.listen(port, () => {
+app.listen(3002, "0.0.0.0", () => {
   console.log("App listening on port ", port);
 });
