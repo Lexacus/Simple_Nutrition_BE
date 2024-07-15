@@ -5,7 +5,7 @@
     "strict": true,                                 
     "esModuleInterop": true, 
     "skipLibCheck": true,
-    "outDir": "./dist",
+    "outDir": "/.dist",
     "forceConsistentCasingInFileNames": true // Disallow inconsistently-cased references to the same file    
   },
   "include": ["src/**/*.ts", "src/index.ts"],               // Include all TypeScript files in the src directory

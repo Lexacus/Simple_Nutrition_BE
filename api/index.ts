@@ -1,7 +1,7 @@
 import express, { json, Request, Response, urlencoded } from "express";
 import dotenv from "dotenv";
-import { connectToDatabase } from "./database/connection";
-import { FoodModel } from "./modules/foodModel";
+import { connectToDatabase } from "../src/database/connection";
+import { FoodModel } from "../src/modules/foodModel";
 import cors from "cors";
 
 dotenv.config();
@@ -18,7 +18,11 @@ app.use(cors());
 connectToDatabase();
 
 app.get("/", (req: Request, res: Response) => {
-  res.json({ ok: "OK" });
+  console.log("PROCESS ENV", JSON.stringify(process.env));
+  res.json({
+    ok: process.env.MONGO_URI ?? "NOT OK",
+    secrets: JSON.stringify(process.env.secrets ?? "NOT OK"),
+  });
 });
 
 app
