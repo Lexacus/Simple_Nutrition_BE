@@ -9,8 +9,7 @@
     "start": "npx ts-node src/index.ts",
     "build": "npx tsc",
     "serve": "node dist/index.js",
-    "dev": "nodemon src/index.ts",
-    "postbuild": "chmod +x bin/postbuild.sh && ./bin/postbuild.sh"
+    "dev": "nodemon src/index.ts"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
