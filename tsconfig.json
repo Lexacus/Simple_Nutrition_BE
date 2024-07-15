@@ -2,9 +2,12 @@
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
-    "esModuleInterop": true, 
     "strict": true,                                 
+    "esModuleInterop": true, 
     "skipLibCheck": true,
-    "outDir": "./dist"    
-  }
+    "outDir": "/.dist",
+    "forceConsistentCasingInFileNames": true // Disallow inconsistently-cased references to the same file    
+  },
+  "include": ["src/**/*.ts", "src/index.ts"],               // Include all TypeScript files in the src directory
+  "exclude": ["node_modules"]  
 }
