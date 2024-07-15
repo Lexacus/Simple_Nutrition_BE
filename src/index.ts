@@ -18,7 +18,7 @@ app.use(cors());
 connectToDatabase();
 
 app.get("/", (req: Request, res: Response) => {
-  res.json({ ok: "OK" });
+  res.json({ ok: process.env.MONGO_URI ?? "NOT OK" });
 });
 
 app
