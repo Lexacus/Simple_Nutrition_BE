@@ -19,7 +19,10 @@ connectToDatabase();
 
 app.get("/", (req: Request, res: Response) => {
   console.log("PROCESS ENV", JSON.stringify(process.env));
-  res.json({ ok: process.env.MONGO_URI ?? "NOT OK" });
+  res.json({
+    ok: process.env.MONGO_URI ?? "NOT OK",
+    secrets: JSON.stringify(process.env.secrets ?? "NOT OK"),
+  });
 });
 
 app
