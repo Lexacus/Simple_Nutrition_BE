@@ -2,8 +2,16 @@ import { Request, Response } from "express";
 import { FoodModel } from "../models/foodModel";
 
 export const getFoods = async (req: Request, res: Response) => {
-  const allFoods = await FoodModel.find({}).select({ _id: 0 });
+  const allFoods = await FoodModel.find({}).sort({ name: "asc" });
   return res.json(allFoods);
+};
+
+export const addFood = async (req: Request, res: Response) => {
+  if (!Object.keys(req.body).length) {
+    return res.json({ message: "Empty body" });
+  }
+  const addedFood = await FoodModel.create(req.body);
+  return res.json(addedFood);
 };
 
 export const replaceFoods = async (req: Request, res: Response) => {

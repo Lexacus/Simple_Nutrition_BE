@@ -21,6 +21,13 @@ app.get("/", (req: Request, res: Response) => {
   });
 });
 
+app.use((req: Request, res: Response, next) => {
+  if (req.headers.authorization !== process.env.TEMP_PASSWORD) {
+    return res.status(401).json({ unathorized: "unauthorized" });
+  }
+  next();
+});
+
 app.use(routes);
 
 app.listen(3002, "0.0.0.0", () => {
