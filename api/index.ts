@@ -22,6 +22,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.use((req: Request, res: Response, next) => {
+  console.log(req.headers);
   const { x_authorization } = req.headers;
   if (x_authorization !== process.env.TEMP_PASSWORD) {
     return res.status(401).end();
